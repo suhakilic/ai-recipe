@@ -1,5 +1,5 @@
 const fetch = require("node-fetch");
-import { HfInference } from "huggingface/inference"
+import { HfInference } from "@huggingface/inference";
 const { HF_API_KEY } = process.env; // Ensure you set this in Netlify's environment variables
 const hf = new HfInference(HF_API_KEY);
 
