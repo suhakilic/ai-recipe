@@ -1,13 +1,12 @@
 // serverless/get_recipe.js
-import fetch from "node-fetch";
-
+const fetch = require('node-fetch');
 const HF_API_KEY = new HfInference(process.env.HF_API_KEY);
 
 const SYSTEM_PROMPT = `
 You are an assistant that receives a list of ingredients that a user has and suggests a recipe they could make with some or all of those ingredients. You don't need to use every ingredient they mention in your recipe. The recipe can include additional ingredients they didn't mention, but try not to include too many extra ingredients. Format your response in markdown to make it easier to render to a web page.
 `;
 
-exports.handler = async (event, context) => {
+module.exports.handler= async (event, context) => {
   try {
     const { ingredientsArr } = JSON.parse(event.body);
     const ingredientsString = ingredientsArr.join(",");
