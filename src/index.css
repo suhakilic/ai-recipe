@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #EED7A1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+    padding: 2rem;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.search-bar *,
+.get-recipe,
+.delete-all {
+    margin-top: 0.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    max-width: 320px;
+    width: 100%;
+    border: none;
+    min-height: 2rem;
+    font-size: 1rem;
+    border-radius: 15px;
+    display: block;
+}
+
+.get-recipe {
+    margin-bottom: 1rem;
+}
+
+.search-bar input {
+    padding-left: 1rem;
+}
+
+.search-bar button,
+.get-recipe,
+.delete-all {
+    background-color: #CD8B62;
+}
+
+.search-bar button::before {
+    content: "+ ";
+}
+
+.my-ingredients {
+    list-style-position: inside;
+    margin-left: 0.5rem;
+}
+
+.suggested-recipe-container {
+    line-height: 28px;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.suggested-recipe-container ul li,
+.suggested-recipe-container ol li {
+    margin-bottom: 10px;
+    list-style-position: inside;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+
+
+.loading-container {
+    max-width: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    /* Adjust as needed */
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-top-color: #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
