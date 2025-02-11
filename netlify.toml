@@ -1,9 +1,4 @@
 [build]
-    publish = "src/"
-    functions = "serverless/"
+    publish = "dist/"
 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-  force = false
+    functions = "serverless/"
