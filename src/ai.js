@@ -23,16 +23,17 @@ export async function getRecipeFromMistral(ingredientsArr) {
   // } catch (err) {
   //   console.error(err.message);
   // }
-
   try {
-    const responseStream = await fetch("./.netlify/functions/get_recipe", {
+    const response = await fetch("./.netlify/functions/get_recipe", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ ingredientsArr }),
+      body: JSON.stringify({ ingredientsArr }), // Sending ingredients array
     });
-    const responseData = await responseStream.json();
-    return responseData.recipe;
+
+    const responseData = await response.json();
+    return responseData.recipe; // Return the recipe from the serverless function
   } catch (err) {
-    console.error(err.message);
+    console.error("Error fetching recipe:", err.message);
+    return null;
   }
 }
