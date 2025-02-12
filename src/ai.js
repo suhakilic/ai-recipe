@@ -31,7 +31,7 @@ export async function getRecipeFromMistral(ingredientsArr) {
     });
 
     const responseData = await response.json();
-    return responseData.recipe; // Return the recipe from the serverless function
+    return responseData; // Return the recipe from the serverless function
   } catch (err) {
     console.error("Error fetching recipe:", err.message);
     return null;

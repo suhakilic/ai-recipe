@@ -26,18 +26,18 @@ export async function handler(event, context)  {
     );    
 
     const data = await response.json();  // Parse the response from Hugging Face API
-
-    if (response.ok) {
-      return {
-        statusCode: 200,
-        body: JSON.stringify({ recipe: data }),
-      };
-    } else {
-      return {
-        statusCode: 400,
-        body: JSON.stringify({ error: data }),
-      };
-    }
+    return data
+    // if (response.ok) {
+    //   return {
+    //     statusCode: 200,
+    //     body: JSON.stringify({ recipe: data }),
+    //   };
+    // } else {
+    //   return {
+    //     statusCode: 400,
+    //     body: JSON.stringify({ error: data }),
+    //   };
+    // }
   } catch (err) {
     console.error("Request failed:", err.message);
     return {
