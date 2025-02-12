@@ -26,7 +26,8 @@ export async function handler(event, context)  {
     );    
 
     const data = await response.json();  // Parse the response from Hugging Face API
-    return data
+    console.log(data)
+    return data.parse()
     // if (response.ok) {
     //   return {
     //     statusCode: 200,
