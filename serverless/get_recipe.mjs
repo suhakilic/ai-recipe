@@ -23,14 +23,14 @@ export async function handler(event, context)  {
           inputs: `I have ${ingredientsString}. Please give me a recipe you'd recommend I make!`,  // Inputs to the model
         }),
       }
-    );
+    );    
 
     const data = await response.json();  // Parse the response from Hugging Face API
 
     if (response.ok) {
       return {
         statusCode: 200,
-        body: JSON.stringify({ recipe: data.choices[0].message.content }),
+        body: JSON.stringify({ recipe: data }),
       };
     } else {
       return {
