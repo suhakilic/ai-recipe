@@ -68,6 +68,7 @@ exports.handler = async (event, context) => {
       ],
       max_tokens: 1024,
       temperature: 0.3,  // ⬇ Less creativity = Faster response
+      top_p: 0.3,  // ⬇ Lower probability cutoff = Faster response
     });
     console.log("API Response:", JSON.stringify(response, null, 2));
     return {
