@@ -35,7 +35,8 @@ However, as the app is powered by serverless functions, sometimes the Hugging Fa
 - **Inconsistent Recipe Fetching**: Due to the use of serverless functions and the time it takes for the Hugging Face API to respond, sometimes users may experience delays or failures in receiving a recipe. The loading bar may appear, but no recipe is returned. In such cases, users may need to click the "Get Recipe" button a few times before a recipe is generated. This issue is being investigated, and I hope to resolve it in future updates.
 
 ## Live Demo
-You can access the live demo of the app here: [Live Demo]([https://suhacankilicairecipeapp.netlify.app/])
+You can access the live demo of the app here.
+Test the app live <a href="https://suhacankilicairecipeapp.netlify.app/" target="_blank">here</a>.
 
 ## App Screenshots
 <img src="https://github.com/user-attachments/assets/80bf0ec7-f8a9-43cf-8fc8-2daacb437aa7" width=200px height=400px>
