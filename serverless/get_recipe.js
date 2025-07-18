@@ -66,7 +66,7 @@ export async function handler(event, context) {
           content: `I have ${ingredientsString}. Please give me a recipe you'd recommend I make!`,
         },
       ],
-      max_tokens: 1024,
+      max_tokens: 512,
       temperature: 0.0,  // ⬇ Less creativity = Faster response
     });
     // console.log("API Response:", JSON.stringify(response, null, 2));
